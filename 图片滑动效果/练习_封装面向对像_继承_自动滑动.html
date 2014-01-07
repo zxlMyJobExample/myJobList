@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片滑动效果 - 妙味课堂 - www.miaov.com</title>
+<style type="text/css">
+* { padding: 0; margin: 0; }
+li { list-style: none; }
+body { background: url(images/bg.gif); }
+
+h2 { font-size: 16px; width: 450px; height: 334px; position: absolute; top: 50%; left: 50%; margin: -195px 0 0 -225px; text-align:center; }
+h3 a { font-family: arial; font-size: 14px; text-decoration: none; color:#033; border-bottom: 1px dotted #333; font-weight: normal;  width: 450px; height: 20px; position: absolute; top: 50%; left: 50%; margin: 180px 0 0 -225px; text-align:center; }
+h3 a:hover { border-bottom: 1px solid #033; }
+
+.images_slide { width: 450px; height: 334px; margin:20px auto; overflow:hidden; background:#fff; position:relative;}
+.images_slide .mark{ position: absolute; top: 0; left: 0; width:450px; height:334px; z-index:99; background:#fff; opacity:0; filter:alpha(opacity:0)}
+.images_slide .box{ position: absolute; top: 0; left: 0; width:450px; height:334px; z-index:1;}
+.images_slide img { position: absolute; top: 0; left: 0; alpha(opacity:100); opacity:1; display:none; width:450px; height:334px;}
+
+</style>
+<script type="text/javascript" src="ImageSlide.js"></script>
+<script type="text/javascript" src="AutoImageSlide.js"></script>
+
+<script type="text/javascript">
+window.onload = function()
+{
+	var oImagesSlide=document.getElementById('images_slide');
+	var oImagesSlide2=document.getElementById('images_slide2');
+	var newImg=new ImageSlide(oImagesSlide);
+	newImg.init();
+
+	var newImg2=new AutoImageSlide(oImagesSlide2);
+	newImg2.init();
+	
+	
+}
+
+</script>
+</head>
+
+<body>
+
+<h2 id="miaov_title1">图片滑动展示效果</h2>
+<div id="images_slide" class="images_slide">
+	<a href="javascript:;" class="mark"></a>
+    <div class="box">
+    <img src="images/1.jpg" alt="妙味课堂 - www.miaov.com" style="display:block;"/>
+    <img src="images/2.jpg"  alt="妙味课堂 - www.miaov.com"/>
+    <img src="images/3.jpg"  alt="妙味课堂 - www.miaov.com"/>
+    </div>
+    
+</div>
+<div id="images_slide2" class="images_slide">
+	<a href="javascript:;" class="mark"></a>
+    <div class="box">
+    <img src="images/1.jpg" alt="妙味课堂 - www.miaov.com" style="display:block;"/>
+    <img src="images/2.jpg"  alt="妙味课堂 - www.miaov.com"/>
+    <img src="images/3.jpg"  alt="妙味课堂 - www.miaov.com"/>
+    </div>
+    
+</div>
+
+
+
+
+</body>
+</html>
